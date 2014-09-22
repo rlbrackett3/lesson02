@@ -1,0 +1,28 @@
+<table>
+	  <tr>
+	    <th>Fullname:</th>
+	    <th>Username:</th>
+	    <th>Email:</th>
+	   
+	  </tr> 
+
+	  <% @user.each do |a| %>
+	    <tr>
+
+	      <td><%= a.fullname %></td>
+	      <td><%= a.username %></td>
+	      <td><%= a.email %></td>
+
+	      <td><%= link_to("Delete User", user_path(a), method: :delete) %>
+	      </td>
+
+	    </tr>
+	  <% end %>
+
+</table>	  
+
+	<%= flash[:notice] if flash[:notice] %>
+	<%= flash[:alert] if flash[:alert] %>
+
+</table>	  
+

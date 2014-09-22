@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>App2</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<%= link_to "Go to User page", users_path(Time.now) %>
+	<%= link_to "Go to Posts", posts_path(Time.now) %>
+	<h1>LANDING</h1>
+
+<%= yield %>
+
+</body>
+</html>
