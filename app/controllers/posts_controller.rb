@@ -1,5 +1,9 @@
 class PostsController < ApplicationController
+# The formatting here is very messy, please try to stick to clean clear code formatting with 2 spaces for tabs
+# This makes it very hard to review and digest what teh code is intended to do.
+	
 	layout 'landing'
+	
 	def index
 		@post = Post.all
 	  if @post.count > 0
