@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-	layout 'landing'
+	layout 'landing' #the controllers should use different layout files
 	def index
 		@user = User.all
 	  if @user.count > 0
