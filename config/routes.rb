@@ -5,13 +5,13 @@ Rails.application.routes.draw do
 
   resources :users
 
-  get 'users/show/:id' => 'users#show'
-  get 'users/index' => 'users#index'
+  get 'users/show/:id' => 'users#show'  # in REST these routes are redundant since you have a 'resources' call above
+  get 'users/index' => 'users#index'    # but they are correct for this assignment as we had not covered resources yet
 
   resources :posts
   
-  get 'posts/new/' => 'posts#new'
-  get 'posts/show/:id' => 'posts#show'
+  get 'posts/new/' => 'posts#new'       # in REST these routes are redundant since you have a 'resources' call above
+  get 'posts/show/:id' => 'posts#show'  # but they are correct for this assignment as we had not covered resources yet
   get 'posts/index' => 'posts#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
